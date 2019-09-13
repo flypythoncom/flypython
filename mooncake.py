@@ -3,7 +3,7 @@
 
 import  turtle  as tt
 import  math
-import  time
+
 
 tt.hideturtle()
 tt.speed(10)
@@ -72,6 +72,5 @@ def draw():
 
 
 if __name__ == "__main__":
-    time.sleep(10)
     draw()
 

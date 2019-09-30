@@ -25,11 +25,8 @@ message['To'] = ['flypython.com@gmail.com']
 
 #登录并发送邮件
 try:
-    smtpObj = smtplib.SMTP()
-    #连接到服务器
-    smtpObj.connect(mail_host,25)
-    #登录到服务器
-    smtpObj.login(mail_user,mail_pass)
+    smtpObj = smtplib.SMTP_SSL(mail_host, 465)  # 启用SSL发信, 端口一般是465
+    smtpObj.login(mail_user, mail_pass)  # 登录验证
     #发送
     smtpObj.sendmail(
         sender,receivers,message.as_string())
